@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NMT MEMES | ID23</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Specific overrides for meme page */
+        body {
+            display: block;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 10px;
+        }
+
+        .page-header {
+            text-align: center;
+            padding: 120px 20px 80px;
+        }
+
+        main {
+            max-width: 1000px;
+            /* Constrained width for better reading */
+            margin: 0 auto;
+            padding-bottom: 100px;
+        }
+
+        /* Standard Section Styles */
+        .meme-static-section {
+            margin-bottom: 80px;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .meme-static-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .section-header {
+            margin-bottom: 30px;
+        }
+
+        .meme-title {
+            font-size: 2.5rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 5px;
+        }
+
+        .meme-disclaimer {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-style: italic;
+        }
+
+        .meme-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .meme-img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            /* Smooth corners */
+            object-fit: cover;
+            background: rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        /* Subtle hover lift (optional) */
+        .meme-img:hover {
+            transform: translateY(-5px);
+        }
+
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+            margin-top: 80px;
+        }
+
+        @media (max-width: 768px) {
+            .meme-grid {
+                grid-template-columns: 1fr;
+            }
+
+            h1 {
+                font-size: 3rem;
+            }
+        }
+
+        .meme-video {
+            width: 100%;
+            height: auto;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Custom Cursor -->
+    <div id="cursor-follower">
+        <div class="cursor-text">AI</div>
+        <div class="cursor-ring"></div>
+    </div>
+
+    <header>
+        <div class="logo">
+            <img src="assets/header_logo.png" alt="ID23 Logo" id="header-logo">
+        </div>
+        <div class="site-title">NMT MEMES</div>
+        <nav>
+            <a href="index.html">Back to Display</a>
+        </nav>
+    </header>
+
+    <div class="page-header">
+        <h1 class="shake-hover">MEME VAULT</h1>
+        <p class="subtitle" style="font-size: 1rem; opacity: 0.6;">AI generated these too... probably.</p>
+    </div>
+
+    <main>
+        <!-- Section 1: TIGER RASHMI -->
+        <section class="meme-static-section">
+            <div class="section-header">
+                <div class="meme-title">TIGER RASHMI</div>
+                <div class="meme-disclaimer">This content is not AI-generated.</div>
+            </div>
+            <div class="meme-grid">
+                <img src="assets/meme_tiger.jpg" alt="Tiger Meme" class="meme-img">
+                <img src="assets/meme_rashmi.png" alt="Rashmi Meme" class="meme-img">
+            </div>
+            <div class="divider"></div>
+        </section>
+
+        <!-- Section 2: MEME-MALTAS -->
+        <section class="meme-static-section">
+            <div class="section-header">
+                <div class="meme-title">MEME-MALTAS</div>
+                <div class="meme-disclaimer">This content is not AI-generated.</div>
+            </div>
+            <div class="meme-grid">
+                <!-- Using collage image as full width -->
+                <img src="assets/meme_maltas.png" alt="Maltas Meme" class="meme-img">
+            </div>
+            <div class="divider"></div>
+        </section>
+
+        <!-- Section 3: SHAKAL ADARSH -->
+        <section class="meme-static-section">
+            <div class="section-header">
+                <div class="meme-title">SHAKAL ADARSH</div>
+                <div class="meme-disclaimer">This content is not AI-generated.</div>
+            </div>
+            <div class="meme-grid">
+                <!-- Using collage image as full width -->
+                <img src="assets/meme_shakal.png" alt="Shakal Meme" class="meme-img">
+            </div>
+            <div class="divider"></div>
+        </section>
+
+        <!-- Section 4: JAI HO -->
+        <section class="meme-static-section">
+            <div class="section-header">
+                <div class="meme-title">JAI HO</div>
+                <div class="meme-disclaimer">This content is not AI-generated.</div>
+            </div>
+            <div class="meme-grid">
+                <video controls class="meme-video">
+                    <source src="assets/jai_ho.mp4" type="video/mp4">
+                    <!-- Fallback if user uses nmt_display_video.mp4 -->
+                    <source src="assets/nmt_display_video.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
